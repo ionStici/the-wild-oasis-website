@@ -3,8 +3,8 @@
 import { supabase } from "./supabase";
 import { auth, signIn, signOut } from "./auth";
 import { revalidatePath } from "next/cache";
-import { getBookings } from "./data-service";
 import { redirect } from "next/navigation";
+import { getBookings } from "./data-service";
 
 export async function signInAction() {
   await signIn("google", { redirectTo: "/account" });

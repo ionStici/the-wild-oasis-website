@@ -8,7 +8,6 @@ export default async function CabinList({ filter }) {
   const cabins = await getCabins();
 
   if (!cabins.length) return null;
-  console.log(filter);
 
   let displayedCabins;
   if (filter === "all") displayedCabins = cabins;

@@ -1,12 +1,10 @@
 "use client";
 
 import { TrashIcon } from "@heroicons/react/24/solid";
-import { useTransition } from "react";
 import SpinnerMini from "./SpinnerMini";
+import { useTransition } from "react";
 
 function DeleteReservation({ bookingId, onDelete }) {
-  // render a loading indicator in case that you directly call a server action from a button, and not from a form
-  // behind the scenes react uses suspense boundaries in order for this to work
   const [isPending, startTransition] = useTransition();
 
   function handleDelete() {
